@@ -1,0 +1,47 @@
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0; background: #1a1a2e; color: #eee;
+  padding: env(safe-area-inset-top) 1rem 2rem;
+}
+header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+header h1 { font-size: 1.2rem; font-weight: 400; margin: 0; }
+.badge { font-size: .75rem; padding: .3rem .6rem; border-radius: 999px; background: #333; }
+.badge.ok { background: #4ecca3; color: #000; }
+.badge.err { background: #e94560; }
+
+.tabs { display: flex; gap: .5rem; margin-bottom: 1rem; }
+.tab {
+  flex: 1; padding: .8rem; border: none; border-radius: 8px;
+  background: #16213e; color: #eee; font-size: .95rem; cursor: pointer;
+}
+.tab.active { background: #0f3460; box-shadow: 0 0 12px rgba(15,52,96,.8); }
+
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+
+.card, .lampu-card {
+  background: #16213e; border-radius: 12px; padding: 1rem;
+  transition: background .3s, box-shadow .3s;
+}
+.lampu-card.nyala { background: #0f3460; box-shadow: 0 0 18px rgba(255,215,0,.35); }
+.lampu-card h2 { font-size: 1rem; font-weight: 400; margin: 0 0 .8rem; }
+.tombol {
+  width: 100%; padding: .8rem; border: none; border-radius: 8px;
+  background: #e94560; color: #fff; font-size: 1rem; cursor: pointer;
+}
+.lampu-card.nyala .tombol { background: #533483; }
+
+.card label { display: block; font-size: .85rem; margin: 1rem 0 .3rem; color: #aaa; }
+.card input, .card button {
+  width: 100%; padding: .7rem; border-radius: 8px;
+  border: 1px solid #333; background: #0f0f1e; color: #eee; font-size: 1rem;
+}
+.card button {
+  margin-top: 1rem; background: #007bff; border: none; cursor: pointer;
+}
+.card button:disabled { background: #555; }
+pre {
+  background: #0f0f1e; padding: .8rem; border-radius: 8px;
+  max-height: 300px; overflow: auto; font-size: .75rem; margin-top: 1rem;
+}
